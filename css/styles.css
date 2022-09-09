@@ -1,4 +1,4 @@
-
+/* CSS */
 :root {
     --logo-color: #000000;
     --accent-color:#2196f3;
@@ -757,6 +757,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     gap: 30px;
     margin: 0;
     padding-left: 0;
+    position: relative;
 }
 
 .photo-flex{
@@ -817,7 +818,11 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .main-content .photo-portfolio-list p {
-    color: var(--main-text-color);
+  
+    font-size: 16px;
+    line-height: 1.8;
+}
+.photo-portfolio-list p{
     font-size: 16px;
     line-height: 1.8;
 }
@@ -841,6 +846,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 .photo-potfolio-paragraph{
     margin-top: 0;
     margin-bottom: 0;
+    color: var(--main-text-color); 
 }
 
 .none-style{
@@ -907,6 +913,8 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 }
 .gallery-list{
     display: block;
+    position: relative; 
+    overflow: hidden;
     transition: opacity 250ms var(--cubic-bezier);
 }
 .gallery-window{
@@ -916,15 +924,14 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     width: 370px;
     height: 294px;
     padding: 63px 24px;
-    background-color:  rgba(33, 150, 243, 0.9);
     transform: translateY(101%);
-    transition: transform 250ms var(--cubic-bz);
+    background-color:  rgba(33, 150, 243, 0.9);
+    transition: transform 250ms var(--cubic-bezier);
+    color:#FFFFFF;
 }
 
-.gallery-list:hover,
-.gallery-window:focus,
-.gallery-list:focus,
-.gallery-window:hover{
+.gallery-list:hover .gallery-window,
+.gallery-list:focus .gallery-window{
     transform: translateY(0);
 }
 
@@ -932,6 +939,6 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03em;
-    color: var(--header-bcolor);
+
 }
     
